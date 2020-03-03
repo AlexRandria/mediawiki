@@ -1,2 +1,12 @@
 - name: ping_machine_cible
   ping:
+
+- name: Create directory mediawiki
+  file:
+    path: /appli/mediawiki/
+    state: directory
+
+- name: Create data directory mediawiki
+  file:
+    path: /home/mediawiki/data
+    state: directory
