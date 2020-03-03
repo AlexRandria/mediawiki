@@ -1,0 +1,4 @@
+md4serv ansible_host=10.31.2.69 ansible_user=devops
+
+[mediawiki]
+md4serv
