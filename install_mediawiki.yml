@@ -1,2 +1,2 @@
-- import_playbook: fs.yml
 - import_playbook: lamp.yml
+- import_playbook: system.yml
