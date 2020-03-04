@@ -1,2 +1,24 @@
-- include_tasks: setenforce.yml
-- include_tasks: apache.yml
+  - name: Create database repertory
+    file:
+      path: /appli/projects/mediawiki/mariadb
+      state: directory
+
+  - name: Create serverweb repertory
+    file:
+      path: /appli/projects/mediawiki/httpd
+      state: directory
+
+  - name: Create log repertory webserver mediawiki
+    file:
+      path: /var/projects/mediawiki/httpd
+      state: directory
+
+  - name: Create log repertory database mediawiki
+    file:
+      path: /var/projects/mediawiki/mariadb
+      state: directory
+
+   - name: Create livrable repertory
+     file:
+       path: /appli/mediawiki/LIVR/01.00.00
+       state: directory
