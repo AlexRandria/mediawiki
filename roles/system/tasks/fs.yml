@@ -1,0 +1,29 @@
+- name: Create a logical volume log
+  lvol:
+    vg: centos
+    lv: log
+    size: 1024
+
+- name: Formater log en xfs
+  filesystem:
+    fstype: xfs
+    dev: /dev/centos/log
+
+- name: Create a logical volume log
+  lvol:
+    vg: centos
+    lv: log
+    size: 1024
+
+- name: Create a logical volume log
+  lvol:
+    vg: centos
+    lv: log
+    size: 1024
+
+- name: Mount log
+  mount:
+    path: /var/projects/mediawiki
+    src: /dev/centos/log
+    fstype: xfs
+    state: present
