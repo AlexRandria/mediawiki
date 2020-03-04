@@ -1,42 +1,35 @@
-# groupe pour le serveur
+- name: installer apache et php
+  yum:
+    name:
+      - apache2
+      - php
+      - php-mysql
+    state: present
+    update_cache: yes
 
-- hosts: mediawiki
-  become: yes
-  vars_files: roles/defaults/main.yml
+- name: droit d'ecriture sur le dossier apache
+  file:
+    path: /var/www/html
+    state: directory
+    mode: '0755'
 
-  tasks:
-  - name: installer apache et php
-    yum:
-      name:
-        - apache2
-        - php
-        - php-mysql
-      state: present
-      update_cache: yes
+- name: supprimer le fichier (page par defaut) index.html
+  file:
+    path: /var/www/html/index.html
+    state: absent
 
-  - name: droit d'ecriture sur le dossier apache
-    file:
-      path: /var/www/html
-      state: directory
-      mode: '0755'
+- name: upload web app source
+  copy:
+    src: app/
+    dest: /var/www/html/
 
-  - name: supprimer le fichier (page par defaut) index.html
-    file:
-      path: /var/www/html/index.html
-      state: absent
+- name: deploy php database config
+  template:
+    src: "/template/db-config.php.j2"
+    dest: "/var/www/html/db-config.php"
 
-  - name: upload web app source
-    copy:
-      src: app/
-      dest: /var/www/html/
-
-  - name: deploy php database config
-    template:
-      src: "/template/db-config.php.j2"
-      dest: "/var/www/html/db-config.php"
-
-  - name: ensure apache service is start
-    service:
-      name: apache2
-      state: started
-      enabled: yes
+- name: ensure apache service is start
+  service:
+    name: apache2
+    state: started
+    enabled: yes
