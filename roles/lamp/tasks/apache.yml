@@ -2,7 +2,7 @@
 
 - hosts: mediawiki
   become: true
-  vars_files: inventories/variable.yml
+  vars_files: roles/defaults/variable.yml
 
   tasks:
   - name: installer apache et php
