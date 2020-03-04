@@ -13,3 +13,8 @@
       - php-intl
       - php-mbstring
       - firewalld
+- name: enable service httpd and ensure it is not masked
+  systemd:
+    name: httpd
+    enabled: yes
+    masked: no
