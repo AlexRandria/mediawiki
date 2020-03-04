@@ -14,16 +14,16 @@
     state: present
     update_cache: yes
 
-- name: droit d'ecriture sur le dossier apache
-  file:
-    path: /var/www/html
-    state: directory
-    mode: '0755'
+#- name: droit d'ecriture sur le dossier apache
+#  file:
+#    path: /var/www/html
+#    state: directory
+#    mode: '0755'
 
-- name: supprimer le fichier  index
-  file:
-    path: /var/www/html/index.html
-    state: absent
+#- name: supprimer le fichier  index
+#  file:
+#    path: /var/www/html/index.html
+#    state: absent
 
 #- name: upload web app source
 #  copy:
@@ -35,8 +35,8 @@
     src: "/templates/db-config.php.j2"
     dest: "/var/www/html/db-config.php"
 
-- name: ensure apache service is start
-  service:
-    name: apache2
-    state: started
-    enabled: yes
+#- name: ensure apache service is start
+#  service:
+#    name: apache2
+#    state: started
+#    enabled: yes
