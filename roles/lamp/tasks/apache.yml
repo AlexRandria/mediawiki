@@ -1,5 +1,5 @@
 - name: installer apache et php
-  yum:
+  package:
     name:
       - apache2
       - php
