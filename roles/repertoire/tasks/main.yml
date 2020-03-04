@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   - name: Creer repertoire de la base de donnees
     file:
       path: /appli/projects/mediawiki/mariadb
@@ -22,3 +23,7 @@
      file:
        path: /appli/mediawiki/LIVR/01.00.00
        state: directory
+=======
+- name:
+  ping:
+>>>>>>> 3068328b46560dd42330c8fb7be797892e8a3984
