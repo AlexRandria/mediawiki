@@ -1,8 +1,8 @@
 # groupe pour le serveur
 
 - hosts: mediawiki
-  become: true
-  vars_files: roles/defaults/variable.yml
+  become: yes
+  vars_files: roles/defaults/main.yml
 
   tasks:
   - name: installer apache et php
