@@ -51,3 +51,16 @@
     src: /dev/centos/tmp
     fstype: xfs
     state: mounted
+
+- name: Create a logical volume data
+  lvol:
+    vg: centos
+    lv: data
+    size: 2048
+
+- name: Mount data
+  mount:
+    path: /home/mediawiki/data
+    src: /dev/centos/data
+    fstype: xfs
+    state: mounted
