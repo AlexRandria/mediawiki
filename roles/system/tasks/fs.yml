@@ -26,4 +26,4 @@
     path: /var/projects/mediawiki
     src: /dev/centos/log
     fstype: xfs
-    state: present
+    state: mounted
