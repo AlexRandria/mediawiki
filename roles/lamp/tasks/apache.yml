@@ -6,7 +6,7 @@
 
   tasks:
   - name: installer apache et php
-    apt:
+    yum:
       name:
         - apache2
         - php
