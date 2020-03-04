@@ -1,2 +1,2 @@
-- include_tasks: setenforce.yml
-- include_tasks: apache.yml
+- name:
+  ping:
