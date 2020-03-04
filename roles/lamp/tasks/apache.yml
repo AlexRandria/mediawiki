@@ -1,7 +1,9 @@
-
-- name: installer apache et php
+- name: Install PHP et apache2
   package:
-    name:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
       - httpd
       - php
       - php-xml
@@ -11,9 +13,6 @@
       - php-intl
       - php-mbstring
       - firewalld
-    state: present
-    update_cache: yes
-
 #- name: droit d'ecriture sur le dossier apache
 #  file:
 #    path: /var/www/html
@@ -31,9 +30,9 @@
 #    dest: /var/www/html/
 
 #- name: deploy php database config
-  template:
-    src: "/templates/db-config.php.j2"
-    dest: "/var/www/html/db-config.php"
+#  template:
+#    src: "/templates/db-config.php.j2"
+#    dest: "/var/www/html/db-config.php"
 
 #- name: ensure apache service is start
 #  service:
