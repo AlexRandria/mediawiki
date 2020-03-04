@@ -83,7 +83,7 @@
 
 - name: Mount projects
   mount:
-    path: /dev/mapper/centos-projects
-    src: /dev/centos/projects
+    path: /appli/projects/mediawiki
+    src: /dev/mapper/centos-projects
     fstype: xfs
     state: mounted
