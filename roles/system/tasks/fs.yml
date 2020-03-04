@@ -29,7 +29,25 @@
 
 - name: Mount appli
   mount:
-    path: /var/projects/mediawiki
+    path: /appli/mediawiki
     src: /dev/centos/appli
+    fstype: xfs
+    state: mounted
+
+- name: Create a logical volume tmp
+  lvol:
+    vg: centos
+    lv: tmp
+    size: 2048
+
+- name: Formater tmp en xfs
+  filesystem:
+    fstype: xfs
+    dev: /dev/centos/tmp
+
+- name: Mount tmp
+  mount:
+    path: /tmp_app/mediawiki/
+    src: /dev/centos/tmp
     fstype: xfs
     state: mounted
