@@ -58,9 +58,32 @@
     lv: data
     size: 2048
 
+- name: Formater data en xfs
+  filesystem:
+    fstype: xfs
+    dev: /dev/centos/data
+
 - name: Mount data
   mount:
     path: /home/mediawiki/data
     src: /dev/centos/data
+    fstype: xfs
+    state: mounted
+
+- name: Create a logical volume projects
+  lvol:
+    vg: centos
+    lv: projects
+    size: 2048
+
+- name: Formater projects en xfs
+  filesystem:
+    fstype: xfs
+    dev: /dev/centos/projects
+
+- name: Mount projects
+  mount:
+    path: /dev/mapper/centos-projects
+    src: /dev/centos/projects
     fstype: xfs
     state: mounted
