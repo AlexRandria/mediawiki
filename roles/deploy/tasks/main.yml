@@ -1,8 +1,4 @@
 - name: Unzip WordPress
   unarchive:
-<<<<<<< HEAD
     src: files/input_groupeD.tar.gz
-=======
-    src: common/files/input_groupeD.tar.gz
->>>>>>> 755c98dd35b7ce85b69563052b6d6b21e72c40a8
     dest: /tmp_app
