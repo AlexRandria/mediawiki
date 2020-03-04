@@ -14,7 +14,7 @@
     state: directory
     mode: '0755'
 
-- name: supprimer le fichier (page par defaut) index.html
+- name: supprimer le fichier  index
   file:
     path: /var/www/html/index.html
     state: absent
