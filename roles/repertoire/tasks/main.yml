@@ -18,7 +18,7 @@
     path: /var/projects/mediawiki/httpd
     state: directory
 
- - name: Creer dossier du livrable
-   file:
-     path: /appli/mediawiki/LIVR/01.00.00
-     state: directory
+- name: Creer dossier du livrable
+  file:
+    path: /appli/mediawiki/LIVR/01.00.00
+    state: directory
