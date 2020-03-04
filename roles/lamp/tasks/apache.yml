@@ -18,14 +18,14 @@
     path: /var/www/html/index.html
     state: absent
 
-- name: upload web app source
-  copy:
-    src: app/
-    dest: /var/www/html/
+#- name: upload web app source
+#  copy:
+#    src: app/
+#    dest: /var/www/html/
 
-- name: deploy php database config
+#- name: deploy php database config
   template:
-    src: "/template/db-config.php.j2"
+    src: "/templates/db-config.php.j2"
     dest: "/var/www/html/db-config.php"
 
 - name: ensure apache service is start
