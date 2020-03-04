@@ -2,9 +2,15 @@
 - name: installer apache et php
   package:
     name:
-      - apache2
+      - httpd
       - php
+      - php-xml
+      - php-mariadb
       - php-mysql
+      - php-gd
+      - php-intl
+      - php-mbstring
+      - firewalld
     state: present
     update_cache: yes
 
