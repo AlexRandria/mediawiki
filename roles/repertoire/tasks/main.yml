@@ -1,2 +1,24 @@
-- name:
-  ping:
+- name: Creer repertoire de la base de donnees
+  file:
+    path: /appli/projects/mediawiki/mariadb
+    state: directory
+
+- name: Creer repertoire du serveur web
+  file:
+    path: /appli/projects/mediawiki/httpd
+    state: directory
+
+- name: Creer les repertoires de logs de la base de donnees
+  file:
+    path: /var/projects/mediawiki/mariadb
+    state: directory
+
+- name: Creer les repertoires de logs du serveur web
+  file:
+    path: /var/projects/mediawiki/httpd
+    state: directory
+
+- name: Creer dossier du livrable
+  file:
+    path: /appli/mediawiki/LIVR/01.00.00
+    state: directory
