@@ -9,21 +9,27 @@
     fstype: xfs
     dev: /dev/centos/log
 
-- name: Create a logical volume log
-  lvol:
-    vg: centos
-    lv: log
-    size: 1024
-
-- name: Create a logical volume log
-  lvol:
-    vg: centos
-    lv: log
-    size: 1024
-
 - name: Mount log
   mount:
     path: /var/projects/mediawiki
     src: /dev/centos/log
+    fstype: xfs
+    state: mounted
+
+- name: Create a logical volume appli
+  lvol:
+    vg: centos
+    lv: appli
+    size: 2048
+
+- name: Formater appli en xfs
+  filesystem:
+    fstype: xfs
+    dev: /dev/centos/appli
+
+- name: Mount appli
+  mount:
+    path: /var/projects/mediawiki
+    src: /dev/centos/appli
     fstype: xfs
     state: mounted
