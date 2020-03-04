@@ -5,10 +5,8 @@
   file:
     path: /appli/mediawiki/
     state: directory
-  become: yes
 
 - name: Create data directory mediawiki
   file:
     path: /home/mediawiki/data
     state: directory
-  become: yes
