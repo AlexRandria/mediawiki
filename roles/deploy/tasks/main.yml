@@ -1,1 +1,2 @@
 - include_tasks: conf.yml
+- include_tasks: mariadb.yml
