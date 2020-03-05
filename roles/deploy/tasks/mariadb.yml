@@ -5,12 +5,6 @@
   register: mysql_new_root_pass
   notify: restart mariadb
 
-- name: Create my.cnf
-  template:
-    src: templates/mariadb/.my.cnf.j2
-    dest: /root/.my.cnf
-  when: mysql_new_root_pass.changed
-
 - name: Remove anonymous users
   mysql_user:
     name: ""
@@ -21,6 +15,12 @@
   mysql_db:
     name: test
     state: absent
+  when: mysql_new_root_pass.changed
+
+- name: Create my.cnf
+  template:
+    src: templates/mariadb/.my.cnf.j2
+    dest: /root/.my.cnf
   when: mysql_new_root_pass.changed
 
 - name: Output new root password
