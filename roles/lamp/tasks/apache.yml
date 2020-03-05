@@ -12,6 +12,8 @@
       - php-intl
       - php-mbstring
       - firewalld
+      - python-mysqldb
+      
 - name: enable service httpd and ensure it is not masked
   systemd:
     name: httpd
