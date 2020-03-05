@@ -5,9 +5,9 @@
   notify: restart httpd
 
 - name: Check that the welcome.conf exists
-    stat:
-      path: /etc/httpd/conf.d/welcome.conf
-    register: stat_result
+  stat:
+    path: /etc/httpd/conf.d/welcome.conf
+  register: stat_result
 
 - name: Rename welcome.conf
   command: mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.old
