@@ -1,10 +1,5 @@
 - hosts: mediawiki
   become: yes
-  #roles:
-  #  - common
-  #  - migration
-- name: - name: Replace between the expressions (requires Ansible >= 2.4)
-  replace:
-    path: /test
-    regexp: '^vim$'
-    replace: '#lol'
+    roles:
+      - common
+      - migration
