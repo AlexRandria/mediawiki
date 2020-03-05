@@ -52,5 +52,3 @@
   mysql_db:
     name: mediawiki_db
     state: present
-    login_host: "root"
-    login_password: "{{ mysql_new_root_pass.stdout }}"
