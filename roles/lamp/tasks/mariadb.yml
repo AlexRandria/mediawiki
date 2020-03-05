@@ -1,6 +1,6 @@
 - name: Install mariadb
   package:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
     update_cache: yes
   loop:
