@@ -1,0 +1,2 @@
+- name: commande install.php
+  command: php install.php --dbname=mediawiki_db --dbpass=password --dbport=3306 --dbserver=localhost --dbtype=mysql --dbuser=mediawiki_user --scriptpath= --confpath=/appli/projects/mediawiki/httpd/wiki_devops --lang=fr --pass=password wiki_devops admin
