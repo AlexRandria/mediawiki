@@ -1,0 +1,14 @@
+- name: Unarchive logo mediawiki
+  unarchive:
+    src: /appli/mediawiki/LIVR/01.01.00/INPUT_GROUPED/Package_2/LoGo.tar.gz
+    dest: /appli/projects/mediawiki/httpd/wiki_devops/resources/assets/
+- name: - name: Replace between the expressions (requires Ansible >= 2.4)
+  replace:
+    path: /appli/projects/mediawiki/httpd/wiki_devops/LocalSettings.php
+    regexp: '^\$wgLogo \= \"$wgScriptPath\/resources\/assets\/wiki\.png\"\;$'
+    replace: '#\$wgLogo \= \"\$wgScriptPath\/resources\/assets\/GRD-135\.png\"\;'
+- name: Unarchive theme mediawiki
+  unarchive:
+    src: /appli/mediawiki/LIVR/01.01.00/INPUT_GROUPED/Package_2/Theme-REL1_34-b71d3ac.tar.gz
+    dest: /appli/mediawiki/LIVR/01.01.00/INPUT_GROUPED/Package_2/
+- name: modifier LocalSettings pour nouvelle conf    

@@ -3,8 +3,3 @@
     src: /appli/mediawiki/01.00.00_sauvegarde/wiki_devops/LocalSettings.php
     dest: /appli/projects/mediawiki/httpd/wiki_devops/
     recurse: yes
-- name: - name: Replace between the expressions (requires Ansible >= 2.4)
-  replace:
-    path: /appli/projects/mediawiki/httpd/wiki_devops/LocalSettings.php
-    regexp: '^\$wgLogo \= \"$wgScriptPath\/resources\/assets\/wiki\.png\"\;$'
-    replace: '#\$wgLogo \= \"\$wgScriptPath\/resources\/assets\/GRD-135\.png\"\;'

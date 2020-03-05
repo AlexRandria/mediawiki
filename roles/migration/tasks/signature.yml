@@ -1,0 +1,9 @@
+- name: signeture mediawiki 01.01.00
+  file:
+    path: /etc/conf_devops/md4_mediawiki.01.01.00_centos_7
+    state: touch
+- name: signeture php7.4
+  file:
+    path: /etc/conf_devops/md4_php7.4_centos_7
+    state: touch
+    notify: restart httpd

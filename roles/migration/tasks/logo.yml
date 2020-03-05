@@ -1,4 +1,0 @@
-- name: Unarchive logo mediawiki
-  unarchive:
-    src: /appli/mediawiki/LIVR/01.01.00/INPUT_GROUPED/Package_2/LoGo.tar.gz
-    dest: /appli/projects/mediawiki/httpd/wiki_devops/resources/assets/
