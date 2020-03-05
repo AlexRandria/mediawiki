@@ -1,10 +1,14 @@
 - name: Install mariadb
   package:
-    name: mariadb-server
+    name: mariadb
     state: present
     update_cache: yes
 - name: enable service mariadb and ensure it is not masked
   systemd:
-    name: mariadb-server
+    name: mariadb
     enabled: yes
     masked: no
+- name: Start service mariadb, if not started
+  service:
+    name: mariadb
+    state: started

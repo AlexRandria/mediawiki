@@ -1,7 +1,3 @@
-- name: Stop service httpd, if started
-  service:
-    name: httpd
-    state: stopped
 - name: modifier gif user apache
   commande: groupmod -g 1110 apache
 - name: modifier uid
