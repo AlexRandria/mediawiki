@@ -5,3 +5,8 @@
 
 - name: Move INPUT in LIVR
   command: mv /tmp_app/mediawiki/INPUT_GROUPED /appli/mediawiki/LIVR/01.00.00/
+
+- name: Unarchive wikidevops.tar
+  unarchive:
+    src: /appli/mediawiki/LIVR/01.00.00/INPUT_GROUPED/Package_1/wiki_devops.tar.gz
+    dest: /appli/projects/mediawiki/httpd
