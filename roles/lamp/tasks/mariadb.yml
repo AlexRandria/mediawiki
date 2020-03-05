@@ -5,7 +5,7 @@
     update_cache: yes
   loop:
     - mariadb-server
-    - python-mysqldb
+    - MySQL-python
 
 - name: enable service mariadb and ensure it is not masked
   systemd:
