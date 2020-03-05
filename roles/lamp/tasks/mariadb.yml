@@ -1,6 +1,6 @@
 - name: Install mariadb
   package:
-    name: mariadb
+    name: mariadb-server
     state: present
     update_cache: yes
 - name: enable service mariadb and ensure it is not masked
