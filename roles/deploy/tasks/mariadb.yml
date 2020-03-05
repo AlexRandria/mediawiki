@@ -22,22 +22,23 @@
     msg: "New root password is {{mysql_new_root_pass.stdout}}"
   when: mysql_new_root_pass.changed
 
+- name: Create my.cnf
+  template:
+    src: templates/mariadb/.my.cnf.j2
+    dest: /root/.my.cnf
+  when: mysql_new_root_pass.changed
+
 - name: Update root password
   mysql_user:
     name: root
     host: "{{ item }}"
     password: "{{ mysql_new_root_pass.stdout }}"
+    check_implicit_admin: yes
   loop:
     - "{{ ansible_hostname }}"
     - 127.0.0.1
     - ::1
     - localhost
-  when: mysql_new_root_pass.changed
-
-- name: Create my.cnf
-  template:
-    src: templates/mariadb/.my.cnf.j2
-    dest: /root/.my.cnf
   when: mysql_new_root_pass.changed
 
 - name: Create a new database
