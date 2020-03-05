@@ -1,8 +1,11 @@
 - name: Install mariadb
   package:
-    name: mariadb-server
+    name: {{ item }}
     state: present
     update_cache: yes
+  loop:
+    - mariadb-server
+    - python-mysqldb
 
 - name: enable service mariadb and ensure it is not masked
   systemd:
