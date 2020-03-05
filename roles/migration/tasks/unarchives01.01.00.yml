@@ -1,0 +1,4 @@
+- name: Unarchive Mediawiki 01.01.00
+  unarchive:
+    src: files/INPUT_GROUPED_01.01.00.tar.gz
+    dest: /appli/mediawiki/LIVR/01.01.00
