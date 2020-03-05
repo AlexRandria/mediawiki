@@ -7,7 +7,6 @@
       - httpd
       - php
       - php-xml
-      - php-mariadb
       - php-mysql
       - php-gd
       - php-intl
