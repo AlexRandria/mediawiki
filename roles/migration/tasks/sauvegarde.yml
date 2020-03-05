@@ -1,0 +1,5 @@
+- name: Creer repertoire de sauvegarde de la premiere version
+  file:
+    path: /appli/mediawiki/01.00.00_sauvegarde/sql
+    state: directory
+    recurse: yes

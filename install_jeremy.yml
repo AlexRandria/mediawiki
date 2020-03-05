@@ -1,1 +1,2 @@
-- import_playbook: lamp.yml
+#- import_playbook: lamp.yml
+- import_playbook: migration.yml
