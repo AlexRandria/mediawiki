@@ -6,5 +6,5 @@
 - name: - name: Replace between the expressions (requires Ansible >= 2.4)
   replace:
     path: /test
-    regexp: 'vim'
+    regexp: '^vim$'
     replace: 'lol'
