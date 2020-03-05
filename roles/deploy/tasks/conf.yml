@@ -1,6 +1,6 @@
 - name: Create mediawiki.conf
   template:
-    src: templates/mediawiki.conf.j2
+    src: templates/httpd/mediawiki.conf.j2
     dest: /etc/httpd/conf.d/mediawiki.conf
   notify: restart httpd
 
@@ -9,6 +9,6 @@
 
 - name: Create mediawiki.conf
   template:
-    src: templates/my.cnf.j2
+    src: templates/mariadb/my.cnf.j2
     dest: /etc/my.cnf
   notify: restart mariadb
