@@ -17,12 +17,6 @@
     state: absent
   when: mysql_new_root_pass.changed
 
-- name: Create my.cnf
-  template:
-    src: templates/mariadb/.my.cnf.j2
-    dest: /root/.my.cnf
-  when: mysql_new_root_pass.changed
-
 - name: Output new root password
   debug:
     msg: "New root password is {{mysql_new_root_pass.stdout}}"
@@ -39,6 +33,12 @@
     - 127.0.0.1
     - ::1
     - localhost
+  when: mysql_new_root_pass.changed
+
+- name: Create my.cnf
+  template:
+    src: templates/mariadb/.my.cnf.j2
+    dest: /root/.my.cnf
   when: mysql_new_root_pass.changed
 
 - name: Create a new database
