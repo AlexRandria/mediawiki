@@ -1,0 +1,7 @@
+- name: Unarchive Mediawiki
+  unarchive:
+    src: files/input_groupeD.tar.gz
+    dest: /tmp_app/mediawiki
+
+- name: Move INPUT in LIVR
+  command: mv /tmp_app/mediawiki/INPUT_GROUPED /appli/mediawiki/LIVR/01.00.00/
