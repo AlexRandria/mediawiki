@@ -1,0 +1,4 @@
+- name: Create mediawiki.conf
+  template:
+    src: templates/mediawiki.conf.j2
+    dest: /etc/httpd/conf.d/mediawiki.conf
