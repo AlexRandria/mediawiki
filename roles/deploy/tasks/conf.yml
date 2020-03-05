@@ -2,3 +2,13 @@
   template:
     src: templates/mediawiki.conf.j2
     dest: /etc/httpd/conf.d/mediawiki.conf
+  notify: restart httpd
+
+- name: Rename welcome.conf
+  command: mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.old
+
+- name: Create mediawiki.conf
+  template:
+    src: templates/my.cnf.j2
+    dest: /etc/my.cnf
+  notify: restart mariadb
