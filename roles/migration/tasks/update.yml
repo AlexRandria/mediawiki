@@ -1,0 +1,4 @@
+- name: installation dependance rpm
+  command: cd /appli/projects/mediawiki/httpd/wiki_devops/maintenance/
+- name: installation dependance rpm
+  command: php update.php

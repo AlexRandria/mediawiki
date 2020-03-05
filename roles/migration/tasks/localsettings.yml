@@ -1,0 +1,5 @@
+- name: copier localsettings.php
+  copy:
+    src: /appli/mediawiki/01.00.00_sauvegarde/wiki_devops/LocalSettings.php
+    dest: /appli/projects/mediawiki/httpd/wiki_devops/
+    recurse: yes

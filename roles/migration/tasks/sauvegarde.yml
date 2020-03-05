@@ -3,3 +3,11 @@
     path: /appli/mediawiki/01.00.00_sauvegarde/sql
     state: directory
     recurse: yes
+- name: exporter la base de donnees
+  copy:
+    src: dump.sql.medawiki_db
+    dest: /appli/mediawiki/01.00.00_sauvegarde/sql
+- name: copier repertoire de version 01.00.00
+  copy:
+    src: /appli/projects/mediawiki/httpd/wiki_devops/
+    dest: /appli/mediawiki/01.00.00_sauvegarde/wiki_devops
