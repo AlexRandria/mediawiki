@@ -3,7 +3,7 @@
   args:
     creates: /root/.my.cnf
   register: mysql_new_root_pass
-  notify: restart mysql
+  notify: restart mariadb
 
 - name: Remove anonymous users
   mysql_user:
