@@ -1,3 +1,4 @@
+- import_playbook: lamp.yml
 - import_playbook: system.yml
 - import_playbook: repertoire.yml
 - import_playbook: deploy.yml
