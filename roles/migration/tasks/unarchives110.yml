@@ -23,5 +23,4 @@
   copy:
     src: /appli/mediawiki/LIVR/01.01.00/INPUT_GROUPED/Package_2/wiki_devops_v2/
     dest: /appli/projects/mediawiki/httpd/wiki_devops
-    recurse: yes
     remote_src: yes
