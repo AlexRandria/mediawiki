@@ -9,8 +9,14 @@
     name: mediawiki_db
     target: /appli/mediawiki/01.00.00_sauvegarde/sql/mediawiki.sql
 
+- name: Check that wiki devops existe
+  stat:
+    path: /appli/projects/mediawiki/httpd/wiki_devops/
+  register: existe
+
 - name: copier repertoire de version 01.00.00
   copy:
     src: /appli/projects/mediawiki/httpd/wiki_devops/
     dest: /appli/mediawiki/01.00.00_sauvegarde/wiki_devops
     remote_src: yes
+  when: existe.stat.exists == True
