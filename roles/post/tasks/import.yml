@@ -10,4 +10,4 @@
     dest: /tmp_app/mediawiki
 
 - name: importer les images dans la base de donnees
-      command: php /appli/projects/mediawiki/httpd/wiki_devops/maintenance/importImages.php /appli/mediawiki/LIVR/01.00.00/INPUT_GROUPED/Package_1/images
+  command: php /appli/projects/mediawiki/httpd/wiki_devops/maintenance/importImages.php /appli/mediawiki/LIVR/01.00.00/INPUT_GROUPED/Package_1/images
