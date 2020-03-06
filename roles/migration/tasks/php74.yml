@@ -19,3 +19,4 @@
      name: php
      enablerepo: remi-php74
      state: present
+  notify: restart httpd
