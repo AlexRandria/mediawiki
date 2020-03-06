@@ -22,3 +22,19 @@
   file:
     path: /appli/mediawiki/LIVR/01.00.00
     state: directory
+
+- name: Creer dossier du livrable
+  file:
+    path: /appli/mediawiki/LIVR/01.00.00
+    state: directory
+- name: Creer le repertoire de logs de mariadb
+  file:
+    path: /var/projects/mediawiki/mariadb
+    state: directory
+- name: Creer le fichier de logs de mariadb
+  file:
+    path: /var/projects/mediawiki/mariadb/mariadb.log
+    state: touch
+    owner: root
+    group: root:mysql
+    mode: '0664'

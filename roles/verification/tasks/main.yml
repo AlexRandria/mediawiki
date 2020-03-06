@@ -4,12 +4,12 @@
 - name: verifier version httpd
   debug:
     msg: "{{ httpd.stdout }}"
-- name: afficher la version de mariadb
-  command: mysql -v
-  register: mariadb
-- name: verifier version mariadb
-  debug:
-    msg: "{{ mariadb.stdout }}"
+#- name: afficher la version de mariadb
+#  command: mysql -v
+#  register: mariadb
+#- name: verifier version mariadb
+#  debug:
+#    msg: "{{ mariadb.stdout }}"
 - name: afficher la version de php
   command: php -v
   register: php
