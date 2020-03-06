@@ -1,2 +1,6 @@
 - name: afficher la version de httpd
   command: httpd -v
+  register: httpd
+- name: affichage version httpd
+  debug:
+    msg: "{{ httpd.stdout }}"
