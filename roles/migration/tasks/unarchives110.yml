@@ -19,7 +19,6 @@
     path: /appli/projects/mediawiki/httpd/wiki_devops
     state: absent
     recurse: yes
-    force: yes
 
 - name: copier nouveau dossier vers instance
   copy:
