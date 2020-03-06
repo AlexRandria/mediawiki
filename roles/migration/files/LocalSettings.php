@@ -30,7 +30,7 @@ $wgScriptPath = "";
 $wgScriptExtension = ".php";
 ​
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://<adresse_ip>"
+$wgServer = "http://{{ ansible_eth0.ipv4.address }}"
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";

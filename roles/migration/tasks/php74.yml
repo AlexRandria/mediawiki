@@ -11,3 +11,4 @@
 
 - name: Install php74
   command: yum --enablerepo=remi-php74 install php php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt.x86_64 php-mysql.x86_64 php74-php-intl.x86_64 -y
+  notify: restart httpd
