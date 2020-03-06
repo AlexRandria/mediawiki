@@ -52,3 +52,10 @@
   mysql_db:
     name: mediawiki_db
     state: present
+
+- name: Create MySQL user
+  mysql_user:
+    name: mediawiki_user
+    host: localhost
+    password: password
+    priv: mediawiki_db.*:ALL
