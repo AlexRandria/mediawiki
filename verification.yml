@@ -1,5 +1,4 @@
 - hosts: mediawiki
   become: yes
     roles:
-      - common
       - verification
