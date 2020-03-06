@@ -10,14 +10,4 @@
      dest: /tmp_app/mediawiki/package.rpm
 
 - name: Install php74
-  yum:
-     name: /tmp_app/mediawiki/package.rpm
-     enablerepo: remi-php74
-     state: present
-  notify: restart httpd
-
-- name: Install PHP74
-  package:
-    name: php
-    state: present
-    update_cache: yes
+  command: yum --enablerepo=remi-php74 install php php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt.x86_64 php-mysql.x86_64 php74-php-intl.x86_64 -y
