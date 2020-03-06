@@ -1,5 +1,5 @@
 - hosts: mediawiki
   become: yes
-    roles:
-      - common
-      - migration
+  roles:
+    - common
+    - migration
