@@ -7,4 +7,4 @@
   file:
     path: /etc/conf_centos/md4_php7.4_centos_7
     state: touch
-    notify: restart httpd
+  notify: restart httpd
