@@ -3,6 +3,7 @@
     name: epel-release
     state: present
     update_cache: yes
+
 - name: copier rpm file sur le serveur
   copy:
      src: files/remi-release-7.rpm
@@ -11,4 +12,10 @@
 - name: Install package.
   yum:
      name: /tmp_app/mediawiki/package.rpm
+     state: present
+
+- name: Install php74
+  yum:
+     name: php
+     enablerepo: remi-php74
      state: present
