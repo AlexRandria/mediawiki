@@ -36,5 +36,5 @@
     path: /var/projects/mediawiki/mariadb/mariadb.log
     state: touch
     owner: root
-    group: root:mysql
+    group: mysql
     mode: '0664'
