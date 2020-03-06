@@ -7,7 +7,7 @@
   mysql_db:
     state: dump
     name: mediawiki_db
-    target: /appli/mediawiki/01.00.00_sauvegarde/sql
+    target: /appli/mediawiki/01.00.00_sauvegarde/sql/mediawiki.sql
 
 - name: copier repertoire de version 01.00.00
   copy:
