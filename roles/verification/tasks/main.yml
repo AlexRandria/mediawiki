@@ -1,2 +1,2 @@
 - name: afficher la version de httpd
-    command: httpd -v.stdout
+  command: httpd -v.stdout
