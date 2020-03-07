@@ -7,5 +7,5 @@
   debug:
     msg: "Ansible host is {{ ansible_host }}"
 
-- name: script valide la base de données
+- name: Update LocalSettings
   command: php /appli/projects/mediawiki/httpd/wiki_devops/maintenance/update.php
