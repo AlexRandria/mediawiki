@@ -1,7 +1,7 @@
 - name: copier localsettings.php
   template:
     src: templates/LocalSettings.php.j2
-    dest: /appli/projects/mediawiki/httpd/wiki_devops/
+    dest: /appli/projects/mediawiki/httpd/wiki_devops/LocalSettings.php
 
 - name: Output host ansible
   debug:
