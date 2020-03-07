@@ -20,5 +20,14 @@
     state: present
   loop:
     - php
+    - php-xml
+    - php-soap
+    - php-xmlrpc
+    - php-mbstring
+    - php-json
+    - php-gd
+    - php-mcrypt
+    - php-mysql
+    - php74-php-intl
   ignore_errors: true
   notify: restart httpd
