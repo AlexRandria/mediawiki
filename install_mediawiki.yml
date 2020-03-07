@@ -5,4 +5,3 @@
 - import_playbook: deploy.yml
 - import_playbook: install.yml
 - import_playbook: post.yml
-- import_playbook: migration.yml
