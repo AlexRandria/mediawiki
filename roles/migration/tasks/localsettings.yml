@@ -9,3 +9,8 @@
 
 - name: Update LocalSettings
   command: php /appli/projects/mediawiki/httpd/wiki_devops/maintenance/update.php
+
+- name: copier localsettings.php
+  template:
+    src: templates/LocalSettings.php.j2
+    dest: /appli/projects/mediawiki/httpd/wiki_devops/LocalSettings.php
