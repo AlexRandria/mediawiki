@@ -1,16 +1,8 @@
 - name: copier localsettings.php
-  copy:
-    src: files/LocalSettings.php
+  template:
+    src: templates/LocalSettings.php.j2
     dest: /appli/projects/mediawiki/httpd/wiki_devops/
 
-- name: Output new root password
+- name: Output host ansible
   debug:
-    msg: "New root password is {{ ansible_host }}"
-
-- name: Output new root password
-  debug:
-    msg: "New root password is {{ ansible_eth0 }}"
-
-- name: Output new root password
-  debug:
-    msg: "New root password is {{ ansible_hostname }}"
+    msg: "Ansible host is {{ ansible_host }}"
