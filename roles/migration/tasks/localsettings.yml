@@ -2,3 +2,18 @@
   copy:
     src: files/LocalSettings.php
     dest: /appli/projects/mediawiki/httpd/wiki_devops/
+
+- name: Output new root password
+  debug:
+    msg: "New root password is {{ ansible_host }}"
+  when: mysql_new_root_pass.changed
+
+- name: Output new root password
+  debug:
+    msg: "New root password is {{ ansible_eth0 }}"
+  when: mysql_new_root_pass.changed
+
+- name: Output new root password
+  debug:
+    msg: "New root password is {{ ansible_hostname }}"
+  when: mysql_new_root_pass.changed
